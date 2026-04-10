@@ -9,21 +9,20 @@
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
      id="defs37" />
-  <style
-     id="style1">
-    text {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 14px;
-      font-variant-ligatures: none;
-      fill: #111111; /* light mode */
-      white-space: pre;
-    }
-    @media (prefers-color-scheme: dark) {
-      text {
-        fill: #E6E6E6; /* dark mode */
-      }
-    }
-  </style>
+  <style>
+     path {
+        fill: none;
+        stroke: #111111; /* light mode */
+        stroke-width: 1;
+        shape-rendering: crispEdges;
+     }
+     @media (prefers-color-scheme: dark) {
+        path {
+           stroke: #E6E6E6; /* dark mode */
+        }
+     }
+   </style>
+
   <path
      id="rect1"
      d="M 0,0 H 900 V 800 H 0 Z" />
