@@ -1,5 +1,6 @@
 # Bravo36
 Custom firmware for my wacky split keeb with arch36 layout but corne style board (Caterina bootloader with ProMicro board)
+
 Based on crkbd_rev1
 
 # Installation
