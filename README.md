@@ -13,5 +13,6 @@ Based on crkbd_rev1
 Follow the same steps to flash another firmware.
 
 The steps to enter DFU are the same as crkbd_rev1 -
-
-&emsp;Hold Q for left half and P for right half when connecting to the PC to go into DFU. Keep the button held until the flash is complete.
+1. Set QMK Toolbox to auto flash
+2. Hold Q for left half and P for right half when connecting to the PC to go into DFU.
+3. Keep the button held until the flash is complete.
