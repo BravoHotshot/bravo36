@@ -25,11 +25,28 @@
 
   <rect width="100%" height="100%" fill="transparent"/>
 
-  <!-- Example keyboard rows -->
+  <!-- BASE layer -->
   <text x="20" y="40">BASE</text>
   <text x="20" y="60">Q W E R T        Y U I O P</text>
-  <text x="20" y="80">A S D F G        H J K L ;</text>
-  <text x="20" y="100">Z X C V B        N M , . /</text>
+  <text x="20" y="80">A ⇧ S D F G      H J K L ; ⇧</text>
+  <text x="20" y="100">Z ^ X C V B      N M , . / ^</text>
   <text x="20" y="120">ESC ⌘ BSP        TAB SPC ENT</text>
-  <text x="20" y="140">~                NUM NAV</text>
+  <text x="20" y="140">~ |              NUM NAV</text>
+
+  <!-- NAV layer -->
+  <text x="20" y="180">NAV (hold ENT)</text>
+  <text x="20" y="200">F1 F2 F3 F4 F5   F6 F7 F8 F9 F10</text>
+  <text x="20" y="220">F11 F12 ↑        PgU Hom</text>
+  <text x="20" y="240">← ↓ →            PgD End</text>
+  <text x="20" y="260">ESC DEL</text>
+
+  <!-- NUM layer -->
+  <text x="20" y="300">NUM (hold SPC)</text>
+  <text x="20" y="320">1 2 3 4 5        6 7 8 9 0</text>
+  <text x="20" y="340">- = [ ] \        ( ) { } /</text>
+  <text x="20" y="360">. , ; '          : "</text>
+
+  <!-- Legend -->
+  <text x="20" y="400">⇧ = hold Shift   ^ = hold Ctrl   ⌥ = hold Alt</text>
+  <text x="20" y="420">NUM = hold for NUM layer   NAV = hold for NAV layer</text>
 </svg>
