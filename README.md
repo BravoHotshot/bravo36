@@ -15,3 +15,6 @@ Follow the same steps to flash another firmware.
 1. Set QMK Toolbox to auto flash
 2. Hold Q for left half and P for right half when connecting to the PC to go into DFU.
 3. Keep the button held until the flash is complete.
+
+# Keymap
+Will be adding soon
