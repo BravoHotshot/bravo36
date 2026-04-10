@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="120" viewBox="0 0 600 120">
+  <style>
+    path {
+      fill: #111111; /* light mode */
+    }
+    @media (prefers-color-scheme: dark) {
+      path {
+        fill: #E6E6E6; /* dark mode */
+      }
+    }
+  </style>
+
+  <!-- Transparent background -->
+  <rect width="100%" height="100%" fill="transparent"/>
+
+  <!-- Q key -->
+  <path d="M20 40 h40 v40 h-40 z"/> <!-- key box -->
+  <path d="M30 60 q10 -20 20 0 q-10 20 -20 0 z"/> <!-- Q glyph -->
+
+  <!-- W key -->
+  <path d="M70 40 h40 v40 h-40 z"/>
+  <path d="M75 60 l5 -20 l5 20 l5 -20 l5 20"/>
+
+  <!-- E key -->
+  <path d="M120 40 h40 v40 h-40 z"/>
+  <path d="M125 60 h20 v-5 h-15 v-5 h15 v-5 h-20"/>
+
+  <!-- R key -->
+  <path d="M170 40 h40 v40 h-40 z"/>
+  <path d="M175 60 h15 q5 0 5 -5 v-5 q0 -5 -5 -5 h-15 v20 l10 10"/>
+
+  <!-- T key -->
+  <path d="M220 40 h40 v40 h-40 z"/>
+  <path d="M225 45 h30 v5 h-12 v20 h-6 v-20 h-12"/>
+
+  <!-- Y key -->
+  <path d="M270 40 h40 v40 h-40 z"/>
+  <path d="M275 45 l10 15 l10 -15 v10 l-10 15 l-10 -15 z"/>
+
+  <!-- U key -->
+  <path d="M320 40 h40 v40 h-40 z"/>
+  <path d="M325 45 v20 q0 10 15 10 q15 0 15 -10 v-20"/>
+
+  <!-- I key -->
+  <path d="M370 40 h40 v40 h-40 z"/>
+  <path d="M385 45 v30"/>
+
+  <!-- O key -->
+  <path d="M420 40 h40 v40 h-40 z"/>
+  <path d="M430 60 q0 -15 20 0 q0 15 -20 0 z"/>
+
+  <!-- P key -->
+  <path d="M470 40 h40 v40 h-40 z"/>
+  <path d="M475 60 h15 q5 0 5 -5 v-5 q0 -5 -5 -5 h-15 v15"/>
+</svg>
