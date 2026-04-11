@@ -18,6 +18,6 @@ Follow the same steps to flash another firmware.
 
 # Keymap
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="keymap-dark.svg">
-  <img src="keymap-light.svg" alt="Keyboard layout">
+  <source media="(prefers-color-scheme: dark)" srcset="../assets/keymap-dark.svg">
+  <img src="../assets/keymap-light.svg" alt="Keyboard layout">
 </picture>
