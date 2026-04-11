@@ -1,283 +1,296 @@
-<svg viewBox="0 0 720 680" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace">
+<svg viewBox="0 0 720 700" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace">
 <style>
   :root {
-    --bg:       #ffffff;
-    --panel:    #f6f8fa;
-    --panel-s:  #d0d7de;
-    --key:      #ffffff;
-    --key-s:    #d0d7de;
-    --key-t:    #24292f;
-    --sect:     #57606a;
-    --inactive: #d0d7de;
+    --bg:      #ffffff;
+    --panel:   #f6f8fa;
+    --panel-s: #d0d7de;
+    --key:     #ffffff;
+    --key-s:   #d0d7de;
+    --key-t:   #24292f;
+    --dead:    #eaeef2;
+    --dead-s:  #d0d7de;
+    --sect:    #57606a;
 
-    --mod-shift-bg: #ddf4ff;
-    --mod-shift-s:  #0969da;
-    --mod-shift-t:  #0969da;
-
-    --mod-ctrl-bg:  #dafbe1;
-    --mod-ctrl-s:   #1a7f37;
-    --mod-ctrl-t:   #1a7f37;
-
-    --mod-alt-bg:   #fbefff;
-    --mod-alt-s:    #8250df;
-    --mod-alt-t:    #8250df;
-
-    --num-bg:       #fff8c5;
-    --num-s:        #9a6700;
-    --num-t:        #24292f;
-
-    --layer-bg:     #fff1e5;
-    --layer-s:      #bc4c00;
-    --layer-t:      #bc4c00;
+    --shift-bg: #ddf4ff; --shift-s: #0969da; --shift-t: #0969da;
+    --ctrl-bg:  #dafbe1; --ctrl-s:  #1a7f37; --ctrl-t:  #1a7f37;
+    --alt-bg:   #fbefff; --alt-s:   #8250df; --alt-t:   #8250df;
+    --num-bg:   #fff8c5; --num-s:   #9a6700; --num-t:   #24292f;
+    --lay-bg:   #fff1e5; --lay-s:   #bc4c00; --lay-t:   #bc4c00;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg:       #0d1117;
-      --panel:    #161b22;
-      --panel-s:  #30363d;
-      --key:      #21262d;
-      --key-s:    #30363d;
-      --key-t:    #e6edf3;
-      --sect:     #8b949e;
-      --inactive: #21262d;
+      --bg:      #0d1117;
+      --panel:   #161b22;
+      --panel-s: #30363d;
+      --key:     #21262d;
+      --key-s:   #30363d;
+      --key-t:   #e6edf3;
+      --dead:    #161b22;
+      --dead-s:  #21262d;
+      --sect:    #8b949e;
 
-      --mod-shift-bg: #0d2d4a;
-      --mod-shift-s:  #388bfd;
-      --mod-shift-t:  #79c0ff;
-
-      --mod-ctrl-bg:  #0d2b1a;
-      --mod-ctrl-s:   #3fb950;
-      --mod-ctrl-t:   #56d364;
-
-      --mod-alt-bg:   #1e0f3a;
-      --mod-alt-s:    #bc8cff;
-      --mod-alt-t:    #d2a8ff;
-
-      --num-bg:       #2b1f00;
-      --num-s:        #d29922;
-      --num-t:        #e6edf3;
-
-      --layer-bg:     #2b1100;
-      --layer-s:      #f0883e;
-      --layer-t:      #f0883e;
+      --shift-bg: #0d2d4a; --shift-s: #388bfd; --shift-t: #79c0ff;
+      --ctrl-bg:  #0d2b1a; --ctrl-s:  #3fb950; --ctrl-t:  #56d364;
+      --alt-bg:   #1e0f3a; --alt-s:   #bc8cff; --alt-t:   #d2a8ff;
+      --num-bg:   #2b1f00; --num-s:   #d29922; --num-t:   #e6edf3;
+      --lay-bg:   #2b1100; --lay-s:   #f0883e; --lay-t:   #f0883e;
     }
   }
-  .bg     { fill: var(--bg); }
-  .panel  { fill: var(--panel); stroke: var(--panel-s); stroke-width: 1; }
-  .key    { fill: var(--key);   stroke: var(--key-s);   stroke-width: 0.8; }
-  .dead   { fill: var(--inactive); stroke: var(--panel-s); stroke-width: 0.5; }
-  .kt     { fill: var(--key-t); font-size: 11px; text-anchor: middle; dominant-baseline: middle; }
-  .sect   { fill: var(--sect);  font-size: 11px; font-weight: 600; text-anchor: middle; }
+  .bg      { fill: var(--bg); }
+  .panel   { fill: var(--panel); stroke: var(--panel-s); stroke-width: 1; }
+  .key     { fill: var(--key);  stroke: var(--key-s);  stroke-width: 0.8; }
+  .dead    { fill: var(--dead); stroke: var(--dead-s); stroke-width: 0.5; opacity: 0.5; }
+  .sect    { fill: var(--sect); font-size: 11px; font-weight: 600; text-anchor: middle; dominant-baseline: middle; }
+  .kt      { fill: var(--key-t); font-size: 11px; text-anchor: middle; dominant-baseline: middle; }
 
-  .k-shift { fill: var(--mod-shift-bg); stroke: var(--mod-shift-s); stroke-width: 1; }
-  .t-shift { fill: var(--mod-shift-t);  font-size: 9px; }
-  .k-ctrl  { fill: var(--mod-ctrl-bg);  stroke: var(--mod-ctrl-s);  stroke-width: 1; }
-  .t-ctrl  { fill: var(--mod-ctrl-t);   font-size: 9px; }
-  .k-alt   { fill: var(--mod-alt-bg);   stroke: var(--mod-alt-s);   stroke-width: 1; }
-  .t-alt   { fill: var(--mod-alt-t);    font-size: 9px; }
-  .k-num   { fill: var(--num-bg);       stroke: var(--num-s);       stroke-width: 1; }
-  .t-num   { fill: var(--num-t);        font-size: 11px; text-anchor: middle; dominant-baseline: middle; }
-  .k-layer { fill: var(--layer-bg);     stroke: var(--layer-s);     stroke-width: 1; }
-  .t-layer { fill: var(--layer-t);      font-size: 8px; }
-  .t-nav   { fill: var(--mod-shift-t);  font-size: 11px; text-anchor: middle; dominant-baseline: middle; }
+  .k-sh { fill: var(--shift-bg); stroke: var(--shift-s); stroke-width: 1; }
+  .k-ct { fill: var(--ctrl-bg);  stroke: var(--ctrl-s);  stroke-width: 1; }
+  .k-al { fill: var(--alt-bg);   stroke: var(--alt-s);   stroke-width: 1; }
+  .k-nu { fill: var(--num-bg);   stroke: var(--num-s);   stroke-width: 1; }
+  .k-la { fill: var(--lay-bg);   stroke: var(--lay-s);   stroke-width: 1; }
+
+  .t-sh { fill: var(--shift-t); }
+  .t-ct { fill: var(--ctrl-t);  }
+  .t-al { fill: var(--alt-t);   }
+  .t-nu { fill: var(--num-t);   }
+  .t-la { fill: var(--lay-t);   }
+
+  /* dual-label keys: primary top-left, modifier bottom-right */
+  .kp  { font-size: 10px; text-anchor: start; dominant-baseline: auto; }
+  .km  { font-size: 8px;  text-anchor: end;   dominant-baseline: auto; }
+  /* layer thumb keys: primary top-left, layer name bottom-right */
+  .klp { font-size: 8px; text-anchor: start; dominant-baseline: auto; }
+  .klm { font-size: 7px; text-anchor: end;   dominant-baseline: auto; }
 </style>
 
-<rect width="720" height="680" rx="12" class="bg"/>
+<rect width="720" height="700" rx="12" class="bg"/>
+
+<!--
+  Layout math:
+  Key width=38, gap=4, pitch=42
+  5 keys per half → half-width = 5*38 + 4*4 = 206
+  Split gap = 80px
+  Total keys width = 206 + 80 + 206 = 492
+  Panel x=20, width=680 → inner center = 360
+  Left half starts at: 360 - 492/2 = 360 - 246 = 114
+  Right half starts at: 114 + 206 + 80 = 400
+  All rows use: translate(114, y) for left, right half keys offset by 286 (=400-114)
+-->
 
 <!-- ═══ BASE ═══ -->
-<rect x="20" y="14" width="680" height="186" rx="8" class="panel"/>
-<text x="360" y="33" class="sect">BASE</text>
+<rect x="20" y="14" width="680" height="196" rx="8" class="panel"/>
+<text x="360" y="34" class="sect">BASE</text>
 
-<!-- Row 1 -->
-<g transform="translate(30,42)">
+<!-- row1 y=46 -->
+<g transform="translate(114,46)">
   <rect x="0"   y="0" width="38" height="28" rx="3" class="key"/><text x="19"  y="14" class="kt">Q</text>
   <rect x="42"  y="0" width="38" height="28" rx="3" class="key"/><text x="61"  y="14" class="kt">W</text>
   <rect x="84"  y="0" width="38" height="28" rx="3" class="key"/><text x="103" y="14" class="kt">E</text>
   <rect x="126" y="0" width="38" height="28" rx="3" class="key"/><text x="145" y="14" class="kt">R</text>
   <rect x="168" y="0" width="38" height="28" rx="3" class="key"/><text x="187" y="14" class="kt">T</text>
-  <rect x="314" y="0" width="38" height="28" rx="3" class="key"/><text x="333" y="14" class="kt">Y</text>
-  <rect x="356" y="0" width="38" height="28" rx="3" class="key"/><text x="375" y="14" class="kt">U</text>
-  <rect x="398" y="0" width="38" height="28" rx="3" class="key"/><text x="417" y="14" class="kt">I</text>
-  <rect x="440" y="0" width="38" height="28" rx="3" class="key"/><text x="459" y="14" class="kt">O</text>
-  <rect x="482" y="0" width="38" height="28" rx="3" class="key"/><text x="501" y="14" class="kt">P</text>
+  <rect x="286" y="0" width="38" height="28" rx="3" class="key"/><text x="305" y="14" class="kt">Y</text>
+  <rect x="328" y="0" width="38" height="28" rx="3" class="key"/><text x="347" y="14" class="kt">U</text>
+  <rect x="370" y="0" width="38" height="28" rx="3" class="key"/><text x="389" y="14" class="kt">I</text>
+  <rect x="412" y="0" width="38" height="28" rx="3" class="key"/><text x="431" y="14" class="kt">O</text>
+  <rect x="454" y="0" width="38" height="28" rx="3" class="key"/><text x="473" y="14" class="kt">P</text>
 </g>
 
-<!-- Row 2: A has shift, ; has shift -->
-<g transform="translate(30,76)">
-  <rect x="0"   y="0" width="38" height="28" rx="3" class="k-shift"/>
-  <text x="8"   y="10" class="kt t-shift" text-anchor="start" dominant-baseline="auto">A</text>
-  <text x="30"  y="22" class="t-shift" text-anchor="end" dominant-baseline="auto">⇧</text>
+<!-- row2 y=80 -->
+<g transform="translate(114,80)">
+  <rect x="0"   y="0" width="38" height="28" rx="3" class="k-sh"/>
+  <text x="6"   y="9"  class="kt kp t-sh">A</text>
+  <text x="32"  y="23" class="kt km t-sh">⇧</text>
 
   <rect x="42"  y="0" width="38" height="28" rx="3" class="key"/><text x="61"  y="14" class="kt">S</text>
   <rect x="84"  y="0" width="38" height="28" rx="3" class="key"/><text x="103" y="14" class="kt">D</text>
   <rect x="126" y="0" width="38" height="28" rx="3" class="key"/><text x="145" y="14" class="kt">F</text>
   <rect x="168" y="0" width="38" height="28" rx="3" class="key"/><text x="187" y="14" class="kt">G</text>
-  <rect x="314" y="0" width="38" height="28" rx="3" class="key"/><text x="333" y="14" class="kt">H</text>
-  <rect x="356" y="0" width="38" height="28" rx="3" class="key"/><text x="375" y="14" class="kt">J</text>
-  <rect x="398" y="0" width="38" height="28" rx="3" class="key"/><text x="417" y="14" class="kt">K</text>
-  <rect x="440" y="0" width="38" height="28" rx="3" class="key"/><text x="459" y="14" class="kt">L</text>
 
-  <rect x="482" y="0" width="38" height="28" rx="3" class="k-shift"/>
-  <text x="490" y="10" class="kt t-shift" text-anchor="start" dominant-baseline="auto">;</text>
-  <text x="512" y="22" class="t-shift" text-anchor="end" dominant-baseline="auto">⇧</text>
+  <rect x="286" y="0" width="38" height="28" rx="3" class="key"/><text x="305" y="14" class="kt">H</text>
+  <rect x="328" y="0" width="38" height="28" rx="3" class="key"/><text x="347" y="14" class="kt">J</text>
+  <rect x="370" y="0" width="38" height="28" rx="3" class="key"/><text x="389" y="14" class="kt">K</text>
+  <rect x="412" y="0" width="38" height="28" rx="3" class="key"/><text x="431" y="14" class="kt">L</text>
+
+  <rect x="454" y="0" width="38" height="28" rx="3" class="k-sh"/>
+  <text x="460" y="9"  class="kt kp t-sh">;</text>
+  <text x="486" y="23" class="kt km t-sh">⇧</text>
 </g>
 
-<!-- Row 3: Z has ctrl, / has ctrl -->
-<g transform="translate(30,110)">
-  <rect x="0"   y="0" width="38" height="28" rx="3" class="k-ctrl"/>
-  <text x="8"   y="10" class="kt t-ctrl" text-anchor="start" dominant-baseline="auto">Z</text>
-  <text x="30"  y="22" class="t-ctrl" text-anchor="end" dominant-baseline="auto">⌃</text>
+<!-- row3 y=114 -->
+<g transform="translate(114,114)">
+  <rect x="0"   y="0" width="38" height="28" rx="3" class="k-ct"/>
+  <text x="6"   y="9"  class="kt kp t-ct">Z</text>
+  <text x="32"  y="23" class="kt km t-ct">⌃</text>
 
   <rect x="42"  y="0" width="38" height="28" rx="3" class="key"/><text x="61"  y="14" class="kt">X</text>
   <rect x="84"  y="0" width="38" height="28" rx="3" class="key"/><text x="103" y="14" class="kt">C</text>
   <rect x="126" y="0" width="38" height="28" rx="3" class="key"/><text x="145" y="14" class="kt">V</text>
   <rect x="168" y="0" width="38" height="28" rx="3" class="key"/><text x="187" y="14" class="kt">B</text>
-  <rect x="314" y="0" width="38" height="28" rx="3" class="key"/><text x="333" y="14" class="kt">N</text>
-  <rect x="356" y="0" width="38" height="28" rx="3" class="key"/><text x="375" y="14" class="kt">M</text>
-  <rect x="398" y="0" width="38" height="28" rx="3" class="key"/><text x="417" y="14" class="kt">,</text>
-  <rect x="440" y="0" width="38" height="28" rx="3" class="key"/><text x="459" y="14" class="kt">.</text>
 
-  <rect x="482" y="0" width="38" height="28" rx="3" class="k-ctrl"/>
-  <text x="490" y="10" class="kt t-ctrl" text-anchor="start" dominant-baseline="auto">/</text>
-  <text x="512" y="22" class="t-ctrl" text-anchor="end" dominant-baseline="auto">⌃</text>
+  <rect x="286" y="0" width="38" height="28" rx="3" class="key"/><text x="305" y="14" class="kt">N</text>
+  <rect x="328" y="0" width="38" height="28" rx="3" class="key"/><text x="347" y="14" class="kt">M</text>
+  <rect x="370" y="0" width="38" height="28" rx="3" class="key"/><text x="389" y="14" class="kt">,</text>
+  <rect x="412" y="0" width="38" height="28" rx="3" class="key"/><text x="431" y="14" class="kt">.</text>
+
+  <rect x="454" y="0" width="38" height="28" rx="3" class="k-ct"/>
+  <text x="460" y="9"  class="kt kp t-ct">/</text>
+  <text x="486" y="23" class="kt km t-ct">⌃</text>
 </g>
 
-<!-- Thumb row -->
-<g transform="translate(30,144)">
-  <rect x="84"  y="0" width="38" height="28" rx="3" class="k-alt"/>
-  <text x="92"  y="10" class="kt t-alt" text-anchor="start" dominant-baseline="auto">ESC</text>
-  <text x="114" y="22" class="t-alt" text-anchor="end" dominant-baseline="auto">⌥</text>
+<!-- thumb row y=148 -->
+<!--
+  Thumb keys: ESC(⌥) ⌘ BSP | TAB SPC(NUM) ENT(NAV)
+  Left thumb: keys 3,4,5 of left half → x offsets 84,126,168
+  Right thumb: keys 1,2,3 of right half → x offsets 286,328,370
+-->
+<g transform="translate(114,148)">
+  <rect x="84"  y="0" width="38" height="28" rx="3" class="k-al"/>
+  <text x="90"  y="9"  class="kt klp t-al">ESC</text>
+  <text x="116" y="23" class="kt km t-al">⌥</text>
 
   <rect x="126" y="0" width="38" height="28" rx="3" class="key"/><text x="145" y="14" class="kt">⌘</text>
   <rect x="168" y="0" width="38" height="28" rx="3" class="key"/><text x="187" y="14" class="kt">BSP</text>
 
-  <rect x="314" y="0" width="38" height="28" rx="3" class="key"/><text x="333" y="14" class="kt">TAB</text>
+  <rect x="286" y="0" width="38" height="28" rx="3" class="key"/><text x="305" y="14" class="kt">TAB</text>
 
-  <rect x="356" y="0" width="38" height="28" rx="3" class="k-layer"/>
-  <text x="364" y="10" class="kt t-layer" text-anchor="start" dominant-baseline="auto">SPC</text>
-  <text x="386" y="22" class="t-layer" text-anchor="end" dominant-baseline="auto">NUM</text>
+  <rect x="328" y="0" width="38" height="28" rx="3" class="k-la"/>
+  <text x="334" y="9"  class="kt klp t-la">SPC</text>
+  <text x="360" y="23" class="kt klm t-la">NUM</text>
 
-  <rect x="398" y="0" width="38" height="28" rx="3" class="k-layer"/>
-  <text x="406" y="10" class="kt t-layer" text-anchor="start" dominant-baseline="auto">ENT</text>
-  <text x="428" y="22" class="t-layer" text-anchor="end" dominant-baseline="auto">NAV</text>
+  <rect x="370" y="0" width="38" height="28" rx="3" class="k-la"/>
+  <text x="376" y="9"  class="kt klp t-la">ENT</text>
+  <text x="402" y="23" class="kt klm t-la">NAV</text>
 </g>
 
 <!-- ═══ NAV ═══ -->
-<rect x="20" y="214" width="680" height="186" rx="8" class="panel"/>
-<text x="360" y="233" class="sect">NAV  (hold ENT)</text>
+<rect x="20" y="224" width="680" height="196" rx="8" class="panel"/>
+<text x="360" y="244" class="sect">NAV  (hold ENT)</text>
 
-<g transform="translate(30,242)">
+<g transform="translate(114,256)">
   <rect x="0"   y="0" width="38" height="28" rx="3" class="key"/><text x="19"  y="14" class="kt">F1</text>
   <rect x="42"  y="0" width="38" height="28" rx="3" class="key"/><text x="61"  y="14" class="kt">F2</text>
   <rect x="84"  y="0" width="38" height="28" rx="3" class="key"/><text x="103" y="14" class="kt">F3</text>
   <rect x="126" y="0" width="38" height="28" rx="3" class="key"/><text x="145" y="14" class="kt">F4</text>
   <rect x="168" y="0" width="38" height="28" rx="3" class="key"/><text x="187" y="14" class="kt">F5</text>
-  <rect x="314" y="0" width="38" height="28" rx="3" class="key"/><text x="333" y="14" class="kt">F6</text>
-  <rect x="356" y="0" width="38" height="28" rx="3" class="key"/><text x="375" y="14" class="kt">F7</text>
-  <rect x="398" y="0" width="38" height="28" rx="3" class="key"/><text x="417" y="14" class="kt">F8</text>
-  <rect x="440" y="0" width="38" height="28" rx="3" class="key"/><text x="459" y="14" class="kt">F9</text>
-  <rect x="482" y="0" width="38" height="28" rx="3" class="key"/><text x="501" y="14" class="kt">F10</text>
+  <rect x="286" y="0" width="38" height="28" rx="3" class="key"/><text x="305" y="14" class="kt">F6</text>
+  <rect x="328" y="0" width="38" height="28" rx="3" class="key"/><text x="347" y="14" class="kt">F7</text>
+  <rect x="370" y="0" width="38" height="28" rx="3" class="key"/><text x="389" y="14" class="kt">F8</text>
+  <rect x="412" y="0" width="38" height="28" rx="3" class="key"/><text x="431" y="14" class="kt">F9</text>
+  <rect x="454" y="0" width="38" height="28" rx="3" class="key"/><text x="473" y="14" class="kt">F10</text>
 </g>
 
-<g transform="translate(30,276)">
+<g transform="translate(114,290)">
   <rect x="0"   y="0" width="38" height="28" rx="3" class="key"/><text x="19"  y="14" class="kt">F11</text>
   <rect x="42"  y="0" width="38" height="28" rx="3" class="key"/><text x="61"  y="14" class="kt">F12</text>
-  <rect x="84"  y="0" width="38" height="28" rx="3" class="k-shift"/><text x="103" y="14" class="t-nav">↑</text>
+  <rect x="84"  y="0" width="38" height="28" rx="3" class="k-sh"/><text x="103" y="14" class="kt t-sh">↑</text>
   <rect x="126" y="0" width="38" height="28" rx="3" class="dead"/>
   <rect x="168" y="0" width="38" height="28" rx="3" class="dead"/>
-  <rect x="314" y="0" width="38" height="28" rx="3" class="dead"/>
-  <rect x="356" y="0" width="38" height="28" rx="3" class="k-shift"/><text x="375" y="14" class="t-nav">PgU</text>
-  <rect x="398" y="0" width="38" height="28" rx="3" class="k-shift"/><text x="417" y="14" class="t-nav">Hom</text>
-  <rect x="440" y="0" width="38" height="28" rx="3" class="dead"/>
-  <rect x="482" y="0" width="38" height="28" rx="3" class="dead"/>
+  <rect x="286" y="0" width="38" height="28" rx="3" class="dead"/>
+  <rect x="328" y="0" width="38" height="28" rx="3" class="k-sh"/><text x="347" y="14" class="kt t-sh">PgU</text>
+  <rect x="370" y="0" width="38" height="28" rx="3" class="k-sh"/><text x="389" y="14" class="kt t-sh">Hom</text>
+  <rect x="412" y="0" width="38" height="28" rx="3" class="dead"/>
+  <rect x="454" y="0" width="38" height="28" rx="3" class="dead"/>
 </g>
 
-<g transform="translate(30,310)">
+<g transform="translate(114,324)">
   <rect x="0"   y="0" width="38" height="28" rx="3" class="dead"/>
-  <rect x="42"  y="0" width="38" height="28" rx="3" class="k-shift"/><text x="61"  y="14" class="t-nav">←</text>
-  <rect x="84"  y="0" width="38" height="28" rx="3" class="k-shift"/><text x="103" y="14" class="t-nav">↓</text>
-  <rect x="126" y="0" width="38" height="28" rx="3" class="k-shift"/><text x="145" y="14" class="t-nav">→</text>
+  <rect x="42"  y="0" width="38" height="28" rx="3" class="k-sh"/><text x="61"  y="14" class="kt t-sh">←</text>
+  <rect x="84"  y="0" width="38" height="28" rx="3" class="k-sh"/><text x="103" y="14" class="kt t-sh">↓</text>
+  <rect x="126" y="0" width="38" height="28" rx="3" class="k-sh"/><text x="145" y="14" class="kt t-sh">→</text>
   <rect x="168" y="0" width="38" height="28" rx="3" class="dead"/>
-  <rect x="314" y="0" width="38" height="28" rx="3" class="dead"/>
-  <rect x="356" y="0" width="38" height="28" rx="3" class="k-shift"/><text x="375" y="14" class="t-nav">PgD</text>
-  <rect x="398" y="0" width="38" height="28" rx="3" class="k-shift"/><text x="417" y="14" class="t-nav">End</text>
-  <rect x="440" y="0" width="38" height="28" rx="3" class="dead"/>
-  <rect x="482" y="0" width="38" height="28" rx="3" class="dead"/>
+  <rect x="286" y="0" width="38" height="28" rx="3" class="dead"/>
+  <rect x="328" y="0" width="38" height="28" rx="3" class="k-sh"/><text x="347" y="14" class="kt t-sh">PgD</text>
+  <rect x="370" y="0" width="38" height="28" rx="3" class="k-sh"/><text x="389" y="14" class="kt t-sh">End</text>
+  <rect x="412" y="0" width="38" height="28" rx="3" class="dead"/>
+  <rect x="454" y="0" width="38" height="28" rx="3" class="dead"/>
 </g>
 
-<g transform="translate(30,344)">
-  <rect x="168" y="0" width="38" height="28" rx="3" class="dead"/>
-  <rect x="210" y="0" width="38" height="28" rx="3" class="dead"/>
-  <rect x="252" y="0" width="38" height="28" rx="3" class="k-ctrl"/><text x="271" y="14" class="t-nav" style="fill:var(--mod-ctrl-t)">DEL</text>
-  <rect x="314" y="0" width="38" height="28" rx="3" class="dead"/>
-  <rect x="356" y="0" width="38" height="28" rx="3" class="dead"/>
-  <rect x="398" y="0" width="38" height="28" rx="3" class="k-layer"/>
-  <text x="417" y="14" class="t-layer" text-anchor="middle" dominant-baseline="middle">▼</text>
+<!-- NAV thumb row -->
+<g transform="translate(114,358)">
+  <rect x="84"  y="0" width="38" height="28" rx="3" class="dead"/>
+  <rect x="126" y="0" width="38" height="28" rx="3" class="dead"/>
+  <rect x="168" y="0" width="38" height="28" rx="3" class="k-ct"/><text x="187" y="14" class="kt t-ct">DEL</text>
+  <rect x="286" y="0" width="38" height="28" rx="3" class="dead"/>
+  <rect x="328" y="0" width="38" height="28" rx="3" class="dead"/>
+  <rect x="370" y="0" width="38" height="28" rx="3" class="k-la"/><text x="389" y="14" class="kt t-la">▼</text>
 </g>
 
 <!-- ═══ NUM ═══ -->
-<rect x="20" y="414" width="680" height="186" rx="8" class="panel"/>
-<text x="360" y="433" class="sect">NUM  (hold SPC)</text>
+<rect x="20" y="434" width="680" height="196" rx="8" class="panel"/>
+<text x="360" y="454" class="sect">NUM  (hold SPC)</text>
 
-<g transform="translate(30,442)">
-  <rect x="0"   y="0" width="38" height="28" rx="3" class="k-num"/><text x="19"  y="14" class="t-num">1</text>
-  <rect x="42"  y="0" width="38" height="28" rx="3" class="k-num"/><text x="61"  y="14" class="t-num">2</text>
-  <rect x="84"  y="0" width="38" height="28" rx="3" class="k-num"/><text x="103" y="14" class="t-num">3</text>
-  <rect x="126" y="0" width="38" height="28" rx="3" class="k-num"/><text x="145" y="14" class="t-num">4</text>
-  <rect x="168" y="0" width="38" height="28" rx="3" class="k-num"/><text x="187" y="14" class="t-num">5</text>
-  <rect x="314" y="0" width="38" height="28" rx="3" class="k-num"/><text x="333" y="14" class="t-num">6</text>
-  <rect x="356" y="0" width="38" height="28" rx="3" class="k-num"/><text x="375" y="14" class="t-num">7</text>
-  <rect x="398" y="0" width="38" height="28" rx="3" class="k-num"/><text x="417" y="14" class="t-num">8</text>
-  <rect x="440" y="0" width="38" height="28" rx="3" class="k-num"/><text x="459" y="14" class="t-num">9</text>
-  <rect x="482" y="0" width="38" height="28" rx="3" class="k-num"/><text x="501" y="14" class="t-num">0</text>
+<g transform="translate(114,466)">
+  <rect x="0"   y="0" width="38" height="28" rx="3" class="k-nu"/><text x="19"  y="14" class="kt t-nu">1</text>
+  <rect x="42"  y="0" width="38" height="28" rx="3" class="k-nu"/><text x="61"  y="14" class="kt t-nu">2</text>
+  <rect x="84"  y="0" width="38" height="28" rx="3" class="k-nu"/><text x="103" y="14" class="kt t-nu">3</text>
+  <rect x="126" y="0" width="38" height="28" rx="3" class="k-nu"/><text x="145" y="14" class="kt t-nu">4</text>
+  <rect x="168" y="0" width="38" height="28" rx="3" class="k-nu"/><text x="187" y="14" class="kt t-nu">5</text>
+  <rect x="286" y="0" width="38" height="28" rx="3" class="k-nu"/><text x="305" y="14" class="kt t-nu">6</text>
+  <rect x="328" y="0" width="38" height="28" rx="3" class="k-nu"/><text x="347" y="14" class="kt t-nu">7</text>
+  <rect x="370" y="0" width="38" height="28" rx="3" class="k-nu"/><text x="389" y="14" class="kt t-nu">8</text>
+  <rect x="412" y="0" width="38" height="28" rx="3" class="k-nu"/><text x="431" y="14" class="kt t-nu">9</text>
+  <rect x="454" y="0" width="38" height="28" rx="3" class="k-nu"/><text x="473" y="14" class="kt t-nu">0</text>
 </g>
 
-<g transform="translate(30,476)">
-  <rect x="0"   y="0" width="38" height="28" rx="3" class="k-num"/><text x="19"  y="14" class="t-num">-</text>
-  <rect x="42"  y="0" width="38" height="28" rx="3" class="k-num"/><text x="61"  y="14" class="t-num">=</text>
-  <rect x="84"  y="0" width="38" height="28" rx="3" class="k-num"/><text x="103" y="14" class="t-num">[</text>
-  <rect x="126" y="0" width="38" height="28" rx="3" class="k-num"/><text x="145" y="14" class="t-num">]</text>
-  <rect x="168" y="0" width="38" height="28" rx="3" class="k-num"/><text x="187" y="14" class="t-num">\</text>
-  <rect x="314" y="0" width="38" height="28" rx="3" class="dead"/>
-  <rect x="356" y="0" width="38" height="28" rx="3" class="dead"/>
-  <rect x="398" y="0" width="38" height="28" rx="3" class="dead"/>
-  <rect x="440" y="0" width="38" height="28" rx="3" class="dead"/>
-  <rect x="482" y="0" width="38" height="28" rx="3" class="dead"/>
+<g transform="translate(114,500)">
+  <rect x="0"   y="0" width="38" height="28" rx="3" class="k-nu"/><text x="19"  y="14" class="kt t-nu">-</text>
+  <rect x="42"  y="0" width="38" height="28" rx="3" class="k-nu"/><text x="61"  y="14" class="kt t-nu">=</text>
+  <rect x="84"  y="0" width="38" height="28" rx="3" class="k-nu"/><text x="103" y="14" class="kt t-nu">[</text>
+  <rect x="126" y="0" width="38" height="28" rx="3" class="k-nu"/><text x="145" y="14" class="kt t-nu">]</text>
+  <rect x="168" y="0" width="38" height="28" rx="3" class="k-nu"/><text x="187" y="14" class="kt t-nu">\</text>
+  <rect x="286" y="0" width="38" height="28" rx="3" class="dead"/>
+  <rect x="328" y="0" width="38" height="28" rx="3" class="dead"/>
+  <rect x="370" y="0" width="38" height="28" rx="3" class="dead"/>
+  <rect x="412" y="0" width="38" height="28" rx="3" class="dead"/>
+  <rect x="454" y="0" width="38" height="28" rx="3" class="dead"/>
 </g>
 
-<g transform="translate(30,510)">
+<g transform="translate(114,534)">
   <rect x="0"   y="0" width="38" height="28" rx="3" class="dead"/>
   <rect x="42"  y="0" width="38" height="28" rx="3" class="dead"/>
   <rect x="84"  y="0" width="38" height="28" rx="3" class="dead"/>
   <rect x="126" y="0" width="38" height="28" rx="3" class="dead"/>
   <rect x="168" y="0" width="38" height="28" rx="3" class="dead"/>
-  <rect x="314" y="0" width="38" height="28" rx="3" class="dead"/>
-  <rect x="356" y="0" width="38" height="28" rx="3" class="dead"/>
-  <rect x="398" y="0" width="38" height="28" rx="3" class="dead"/>
-  <rect x="440" y="0" width="38" height="28" rx="3" class="dead"/>
-  <rect x="482" y="0" width="38" height="28" rx="3" class="dead"/>
+  <rect x="286" y="0" width="38" height="28" rx="3" class="dead"/>
+  <rect x="328" y="0" width="38" height="28" rx="3" class="dead"/>
+  <rect x="370" y="0" width="38" height="28" rx="3" class="dead"/>
+  <rect x="412" y="0" width="38" height="28" rx="3" class="dead"/>
+  <rect x="454" y="0" width="38" height="28" rx="3" class="dead"/>
 </g>
 
-<g transform="translate(30,544)">
+<!-- NUM thumb row -->
+<g transform="translate(114,568)">
   <rect x="84"  y="0" width="38" height="28" rx="3" class="dead"/>
-  <rect x="126" y="0" width="38" height="28" rx="3" class="k-num"/><text x="145" y="14" class="t-num">`</text>
-  <rect x="168" y="0" width="38" height="28" rx="3" class="k-num"/><text x="187" y="14" class="t-num">'</text>
-  <rect x="314" y="0" width="38" height="28" rx="3" class="dead"/>
-  <rect x="356" y="0" width="38" height="28" rx="3" class="k-layer"/>
-  <text x="375" y="14" class="t-layer" text-anchor="middle" dominant-baseline="middle">▼</text>
-  <rect x="398" y="0" width="38" height="28" rx="3" class="dead"/>
+  <rect x="126" y="0" width="38" height="28" rx="3" class="k-nu"/><text x="145" y="14" class="kt t-nu">`</text>
+  <rect x="168" y="0" width="38" height="28" rx="3" class="k-nu"/><text x="187" y="14" class="kt t-nu">'</text>
+  <rect x="286" y="0" width="38" height="28" rx="3" class="dead"/>
+  <rect x="328" y="0" width="38" height="28" rx="3" class="k-la"/><text x="347" y="14" class="kt t-la">▼</text>
+  <rect x="370" y="0" width="38" height="28" rx="3" class="dead"/>
 </g>
 
 <!-- ═══ Legend ═══ -->
-<rect x="20" y="614" width="680" height="54" rx="8" class="panel"/>
-<rect x="40"  y="631" width="12" height="12" rx="2" class="k-shift"/>
-<text x="58"  y="640" class="kt t-shift" text-anchor="start" dominant-baseline="middle">⇧ Shift hold</text>
-<rect x="170" y="631" width="12" height="12" rx="2" class="k-ctrl"/>
-<text x="188" y="640" class="kt t-ctrl" text-anchor="start" dominant-baseline="middle">⌃ Ctrl hold</text>
-<rect x="300" y="631" width="12" height="12" rx="2" class="k-alt"/>
-<text x="318" y="640" class="kt t-alt" text-anchor="start" dominant-baseline="middle">⌥ Alt hold</text>
-<rect x="430" y="631" width="12" height="12" rx="2" class="k-num"/>
-<text x="448" y="640" class="kt" text-anchor="start" dominant-baseline="middle" style="fill:var(--num-s)">NUM layer</text>
-<rect x="545" y="631" width="12" height="12" rx="2" class="k-layer"/>
-<text x="563" y="640" class="kt t-layer" text-anchor="start" dominant-baseline="middle">Layer hold</text>
+<rect x="20" y="644" width="680" height="44" rx="8" class="panel"/>
+<!--
+  5 legend items evenly spaced across 680px inner width
+  Each item: 12px swatch + 4px gap + ~80px text = ~96px
+  Total: 5*96 = 480, padding each side = (680-480)/2 = 100 → start x=120
+  Item pitch = 120px
+-->
+<g transform="translate(120, 660)">
+  <rect x="0"  y="-6" width="12" height="12" rx="2" class="k-sh"/>
+  <text x="17" y="1" class="kt t-sh" text-anchor="start" dominant-baseline="middle" font-size="10">⇧ Shift hold</text>
+
+  <rect x="120" y="-6" width="12" height="12" rx="2" class="k-ct"/>
+  <text x="137" y="1" class="kt t-ct" text-anchor="start" dominant-baseline="middle" font-size="10">⌃ Ctrl hold</text>
+
+  <rect x="240" y="-6" width="12" height="12" rx="2" class="k-al"/>
+  <text x="257" y="1" class="kt t-al" text-anchor="start" dominant-baseline="middle" font-size="10">⌥ Alt hold</text>
+
+  <rect x="360" y="-6" width="12" height="12" rx="2" class="k-nu"/>
+  <text x="377" y="1" class="kt t-nu" text-anchor="start" dominant-baseline="middle" font-size="10">NUM layer</text>
+
+  <rect x="480" y="-6" width="12" height="12" rx="2" class="k-la"/>
+  <text x="497" y="1" class="kt t-la" text-anchor="start" dominant-baseline="middle" font-size="10">Layer hold</text>
+</g>
+
 </svg>
