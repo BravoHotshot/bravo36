@@ -17,4 +17,7 @@ Follow the same steps to flash another firmware.
 3. Keep the button held until the flash is complete.
 
 # Keymap
-![Keyboard Layout](./assets/keymap.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="keymap-dark.svg">
+  <img src="keymap-light.svg" alt="Keyboard layout">
+</picture>
