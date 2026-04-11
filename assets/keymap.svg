@@ -1,0 +1,197 @@
+<svg viewBox="0 0 720 680" xmlns="http://www.w3.org/2000/svg" font-family="'Fira Code', 'Cascadia Code', 'Consolas', 'Courier New', monospace">
+<style>
+.bg{fill:#1a1a2e}.panel{fill:#16213e;stroke:#3a3a5c;stroke-width:1}.key{fill:#2a2a4a;stroke:#4a4a7a;stroke-width:0.8;rx:4}.keyt{fill:#c8c8e8;font-size:10px;text-anchor:middle;dominant-baseline:middle}.label{fill:#6a8aff;font-size:11px;font-weight:600}.sublabel{fill:#8888aa;font-size:9px;text-anchor:middle}.sect{fill:#3a3a5c;stroke:#5a5a8c;stroke-width:0.5}.sectlabel{fill:#aaaacc;font-size:10px;text-anchor:middle}.accent{fill:#ff6b9d}.accentt{fill:#ff6b9d;font-size:9px;text-anchor:middle;dominant-baseline:middle}
+</style>
+
+<rect width="720" height="680" rx="12" class="bg"/>
+
+<!-- BASE layer -->
+<rect x="20" y="14" width="680" height="180" rx="8" class="panel"/>
+<text x="360" y="32" class="sectlabel" font-size="12" font-weight="700" text-anchor="middle">BASE</text>
+
+<!-- Row 1 -->
+<g transform="translate(30,42)">
+  <rect x="0" y="0" width="38" height="28" rx="3" class="key"/><text x="19" y="14" class="keyt">Q</text>
+  <rect x="42" y="0" width="38" height="28" rx="3" class="key"/><text x="61" y="14" class="keyt">W</text>
+  <rect x="84" y="0" width="38" height="28" rx="3" class="key"/><text x="103" y="14" class="keyt">E</text>
+  <rect x="126" y="0" width="38" height="28" rx="3" class="key"/><text x="145" y="14" class="keyt">R</text>
+  <rect x="168" y="0" width="38" height="28" rx="3" class="key"/><text x="187" y="14" class="keyt">T</text>
+  <rect x="314" y="0" width="38" height="28" rx="3" class="key"/><text x="333" y="14" class="keyt">Y</text>
+  <rect x="356" y="0" width="38" height="28" rx="3" class="key"/><text x="375" y="14" class="keyt">U</text>
+  <rect x="398" y="0" width="38" height="28" rx="3" class="key"/><text x="417" y="14" class="keyt">I</text>
+  <rect x="440" y="0" width="38" height="28" rx="3" class="key"/><text x="459" y="14" class="keyt">O</text>
+  <rect x="482" y="0" width="38" height="28" rx="3" class="key"/><text x="501" y="14" class="keyt">P</text>
+</g>
+
+<!-- Row 2 -->
+<g transform="translate(30,76)">
+  <rect x="0" y="0" width="38" height="28" rx="3" fill="#2a3a5a" stroke="#6a8aff" stroke-width="1"/>
+  <text x="10" y="11" class="keyt" text-anchor="start" font-size="9">A</text>
+  <text x="28" y="21" class="accentt" font-size="9" text-anchor="end">⇧</text>
+  <rect x="42" y="0" width="38" height="28" rx="3" class="key"/><text x="61" y="14" class="keyt">S</text>
+  <rect x="84" y="0" width="38" height="28" rx="3" class="key"/><text x="103" y="14" class="keyt">D</text>
+  <rect x="126" y="0" width="38" height="28" rx="3" class="key"/><text x="145" y="14" class="keyt">F</text>
+  <rect x="168" y="0" width="38" height="28" rx="3" class="key"/><text x="187" y="14" class="keyt">G</text>
+  <rect x="314" y="0" width="38" height="28" rx="3" class="key"/><text x="333" y="14" class="keyt">H</text>
+  <rect x="356" y="0" width="38" height="28" rx="3" class="key"/><text x="375" y="14" class="keyt">J</text>
+  <rect x="398" y="0" width="38" height="28" rx="3" class="key"/><text x="417" y="14" class="keyt">K</text>
+  <rect x="440" y="0" width="38" height="28" rx="3" class="key"/><text x="459" y="14" class="keyt">L</text>
+  <rect x="482" y="0" width="38" height="28" rx="3" fill="#2a3a5a" stroke="#6a8aff" stroke-width="1"/>
+  <text x="492" y="11" class="keyt" text-anchor="start" font-size="9">;</text>
+  <text x="518" y="21" class="accentt" font-size="9" text-anchor="end">⇧</text>
+</g>
+
+<!-- Row 3 -->
+<g transform="translate(30,110)">
+  <rect x="0" y="0" width="38" height="28" rx="3" fill="#2a4a3a" stroke="#6affaa" stroke-width="1"/>
+  <text x="10" y="11" class="keyt" text-anchor="start" font-size="9">Z</text>
+  <text x="28" y="21" font-size="9" text-anchor="end" fill="#6affaa" dominant-baseline="middle">⌃</text>
+  <rect x="42" y="0" width="38" height="28" rx="3" class="key"/><text x="61" y="14" class="keyt">X</text>
+  <rect x="84" y="0" width="38" height="28" rx="3" class="key"/><text x="103" y="14" class="keyt">C</text>
+  <rect x="126" y="0" width="38" height="28" rx="3" class="key"/><text x="145" y="14" class="keyt">V</text>
+  <rect x="168" y="0" width="38" height="28" rx="3" class="key"/><text x="187" y="14" class="keyt">B</text>
+  <rect x="314" y="0" width="38" height="28" rx="3" class="key"/><text x="333" y="14" class="keyt">N</text>
+  <rect x="356" y="0" width="38" height="28" rx="3" class="key"/><text x="375" y="14" class="keyt">M</text>
+  <rect x="398" y="0" width="38" height="28" rx="3" class="key"/><text x="417" y="14" class="keyt">,</text>
+  <rect x="440" y="0" width="38" height="28" rx="3" class="key"/><text x="459" y="14" class="keyt">.</text>
+  <rect x="482" y="0" width="38" height="28" rx="3" fill="#2a4a3a" stroke="#6affaa" stroke-width="1"/>
+  <text x="492" y="11" class="keyt" text-anchor="start" font-size="9">/</text>
+  <text x="518" y="21" font-size="9" text-anchor="end" fill="#6affaa" dominant-baseline="middle">⌃</text>
+</g>
+
+<!-- Thumb row -->
+<g transform="translate(30,144)">
+  <rect x="84" y="0" width="38" height="28" rx="3" fill="#2a2a4a" stroke="#aa88ff" stroke-width="1"/>
+  <text x="95" y="11" class="keyt" text-anchor="start" font-size="8">ESC</text>
+  <text x="118" y="21" font-size="8" text-anchor="end" fill="#aa88ff" dominant-baseline="middle">⌥</text>
+  <rect x="126" y="0" width="38" height="28" rx="3" class="key"/><text x="145" y="14" class="keyt">⌘</text>
+  <rect x="168" y="0" width="38" height="28" rx="3" class="key"/><text x="187" y="14" class="keyt">BSP</text>
+  <rect x="314" y="0" width="38" height="28" rx="3" class="key"/><text x="333" y="14" class="keyt">TAB</text>
+  <rect x="356" y="0" width="38" height="28" rx="3" fill="#3a2a5a" stroke="#ff9944" stroke-width="1"/>
+  <text x="367" y="11" class="keyt" text-anchor="start" font-size="8">SPC</text>
+  <text x="392" y="21" font-size="8" text-anchor="end" fill="#ff9944" dominant-baseline="middle">NUM</text>
+  <rect x="398" y="0" width="38" height="28" rx="3" fill="#3a2a5a" stroke="#ff9944" stroke-width="1"/>
+  <text x="409" y="11" class="keyt" text-anchor="start" font-size="8">ENT</text>
+  <text x="434" y="21" font-size="8" text-anchor="end" fill="#ff9944" dominant-baseline="middle">NAV</text>
+</g>
+
+<!-- NAV layer -->
+<rect x="20" y="208" width="680" height="180" rx="8" class="panel"/>
+<text x="360" y="226" class="sectlabel" font-size="12" font-weight="700" text-anchor="middle">NAV  (hold ENT)</text>
+
+<g transform="translate(30,236)">
+  <rect x="0" y="0" width="38" height="28" rx="3" class="key"/><text x="19" y="14" class="keyt" font-size="9">F1</text>
+  <rect x="42" y="0" width="38" height="28" rx="3" class="key"/><text x="61" y="14" class="keyt" font-size="9">F2</text>
+  <rect x="84" y="0" width="38" height="28" rx="3" class="key"/><text x="103" y="14" class="keyt" font-size="9">F3</text>
+  <rect x="126" y="0" width="38" height="28" rx="3" class="key"/><text x="145" y="14" class="keyt" font-size="9">F4</text>
+  <rect x="168" y="0" width="38" height="28" rx="3" class="key"/><text x="187" y="14" class="keyt" font-size="9">F5</text>
+  <rect x="314" y="0" width="38" height="28" rx="3" class="key"/><text x="333" y="14" class="keyt" font-size="9">F6</text>
+  <rect x="356" y="0" width="38" height="28" rx="3" class="key"/><text x="375" y="14" class="keyt" font-size="9">F7</text>
+  <rect x="398" y="0" width="38" height="28" rx="3" class="key"/><text x="417" y="14" class="keyt" font-size="9">F8</text>
+  <rect x="440" y="0" width="38" height="28" rx="3" class="key"/><text x="459" y="14" class="keyt" font-size="9">F9</text>
+  <rect x="482" y="0" width="38" height="28" rx="3" class="key"/><text x="501" y="14" class="keyt" font-size="8">F10</text>
+</g>
+
+<g transform="translate(30,270)">
+  <rect x="0" y="0" width="38" height="28" rx="3" class="key"/><text x="19" y="14" class="keyt" font-size="8">F11</text>
+  <rect x="42" y="0" width="38" height="28" rx="3" class="key"/><text x="61" y="14" class="keyt" font-size="8">F12</text>
+  <rect x="84" y="0" width="38" height="28" rx="3" fill="#2a3a5a" stroke="#6a8aff" stroke-width="1"/><text x="103" y="14" class="keyt">↑</text>
+  <rect x="126" y="0" width="38" height="28" rx="3" class="key"/>
+  <rect x="168" y="0" width="38" height="28" rx="3" class="key"/>
+  <rect x="314" y="0" width="38" height="28" rx="3" class="key"/>
+  <rect x="356" y="0" width="38" height="28" rx="3" fill="#2a3a5a" stroke="#6a8aff" stroke-width="1"/><text x="375" y="14" class="keyt" font-size="8">PgU</text>
+  <rect x="398" y="0" width="38" height="28" rx="3" fill="#2a3a5a" stroke="#6a8aff" stroke-width="1"/><text x="417" y="14" class="keyt" font-size="8">Hom</text>
+  <rect x="440" y="0" width="38" height="28" rx="3" class="key"/>
+  <rect x="482" y="0" width="38" height="28" rx="3" class="key"/>
+</g>
+
+<g transform="translate(30,304)">
+  <rect x="0" y="0" width="38" height="28" rx="3" class="key"/>
+  <rect x="42" y="0" width="38" height="28" rx="3" fill="#2a3a5a" stroke="#6a8aff" stroke-width="1"/><text x="61" y="14" class="keyt">←</text>
+  <rect x="84" y="0" width="38" height="28" rx="3" fill="#2a3a5a" stroke="#6a8aff" stroke-width="1"/><text x="103" y="14" class="keyt">↓</text>
+  <rect x="126" y="0" width="38" height="28" rx="3" fill="#2a3a5a" stroke="#6a8aff" stroke-width="1"/><text x="145" y="14" class="keyt">→</text>
+  <rect x="168" y="0" width="38" height="28" rx="3" class="key"/>
+  <rect x="314" y="0" width="38" height="28" rx="3" class="key"/>
+  <rect x="356" y="0" width="38" height="28" rx="3" fill="#2a3a5a" stroke="#6a8aff" stroke-width="1"/><text x="375" y="14" class="keyt" font-size="8">PgD</text>
+  <rect x="398" y="0" width="38" height="28" rx="3" fill="#2a3a5a" stroke="#6a8aff" stroke-width="1"/><text x="417" y="14" class="keyt" font-size="8">End</text>
+  <rect x="440" y="0" width="38" height="28" rx="3" class="key"/>
+  <rect x="482" y="0" width="38" height="28" rx="3" class="key"/>
+</g>
+
+<g transform="translate(30,338)">
+  <rect x="168" y="0" width="38" height="28" rx="3" class="key"/>
+  <rect x="210" y="0" width="38" height="28" rx="3" class="key"/>
+  <rect x="252" y="0" width="38" height="28" rx="3" fill="#2a4a3a" stroke="#6affaa" stroke-width="1"/><text x="271" y="14" class="keyt" font-size="8">DEL</text>
+  <rect x="314" y="0" width="38" height="28" rx="3" class="key"/>
+  <rect x="356" y="0" width="38" height="28" rx="3" class="key"/>
+  <rect x="398" y="0" width="38" height="28" rx="3" fill="#3a2a5a" stroke="#ff9944" stroke-width="1"/>
+  <text x="417" y="14" font-size="9" fill="#ff9944" text-anchor="middle" dominant-baseline="middle">▼</text>
+</g>
+
+<!-- NUM layer -->
+<rect x="20" y="402" width="680" height="180" rx="8" class="panel"/>
+<text x="360" y="420" class="sectlabel" font-size="12" font-weight="700" text-anchor="middle">NUM  (hold SPC)</text>
+
+<g transform="translate(30,430)">
+  <rect x="0" y="0" width="38" height="28" rx="3" fill="#2a3a4a" stroke="#44aaff" stroke-width="1"/><text x="19" y="14" class="keyt">1</text>
+  <rect x="42" y="0" width="38" height="28" rx="3" fill="#2a3a4a" stroke="#44aaff" stroke-width="1"/><text x="61" y="14" class="keyt">2</text>
+  <rect x="84" y="0" width="38" height="28" rx="3" fill="#2a3a4a" stroke="#44aaff" stroke-width="1"/><text x="103" y="14" class="keyt">3</text>
+  <rect x="126" y="0" width="38" height="28" rx="3" fill="#2a3a4a" stroke="#44aaff" stroke-width="1"/><text x="145" y="14" class="keyt">4</text>
+  <rect x="168" y="0" width="38" height="28" rx="3" fill="#2a3a4a" stroke="#44aaff" stroke-width="1"/><text x="187" y="14" class="keyt">5</text>
+  <rect x="314" y="0" width="38" height="28" rx="3" fill="#2a3a4a" stroke="#44aaff" stroke-width="1"/><text x="333" y="14" class="keyt">6</text>
+  <rect x="356" y="0" width="38" height="28" rx="3" fill="#2a3a4a" stroke="#44aaff" stroke-width="1"/><text x="375" y="14" class="keyt">7</text>
+  <rect x="398" y="0" width="38" height="28" rx="3" fill="#2a3a4a" stroke="#44aaff" stroke-width="1"/><text x="417" y="14" class="keyt">8</text>
+  <rect x="440" y="0" width="38" height="28" rx="3" fill="#2a3a4a" stroke="#44aaff" stroke-width="1"/><text x="459" y="14" class="keyt">9</text>
+  <rect x="482" y="0" width="38" height="28" rx="3" fill="#2a3a4a" stroke="#44aaff" stroke-width="1"/><text x="501" y="14" class="keyt">0</text>
+</g>
+
+<g transform="translate(30,464)">
+  <rect x="0" y="0" width="38" height="28" rx="3" fill="#2a3a4a" stroke="#44aaff" stroke-width="1"/><text x="19" y="14" class="keyt">-</text>
+  <rect x="42" y="0" width="38" height="28" rx="3" fill="#2a3a4a" stroke="#44aaff" stroke-width="1"/><text x="61" y="14" class="keyt">=</text>
+  <rect x="84" y="0" width="38" height="28" rx="3" fill="#2a3a4a" stroke="#44aaff" stroke-width="1"/><text x="103" y="14" class="keyt">[</text>
+  <rect x="126" y="0" width="38" height="28" rx="3" fill="#2a3a4a" stroke="#44aaff" stroke-width="1"/><text x="145" y="14" class="keyt">]</text>
+  <rect x="168" y="0" width="38" height="28" rx="3" fill="#2a3a4a" stroke="#44aaff" stroke-width="1"/><text x="187" y="14" class="keyt">\</text>
+  <rect x="314" y="0" width="38" height="28" rx="3" class="key"/>
+  <rect x="356" y="0" width="38" height="28" rx="3" class="key"/>
+  <rect x="398" y="0" width="38" height="28" rx="3" class="key"/>
+  <rect x="440" y="0" width="38" height="28" rx="3" class="key"/>
+  <rect x="482" y="0" width="38" height="28" rx="3" class="key"/>
+</g>
+
+<g transform="translate(30,498)">
+  <rect x="0" y="0" width="38" height="28" rx="3" class="key"/>
+  <rect x="42" y="0" width="38" height="28" rx="3" class="key"/>
+  <rect x="84" y="0" width="38" height="28" rx="3" class="key"/>
+  <rect x="126" y="0" width="38" height="28" rx="3" class="key"/>
+  <rect x="168" y="0" width="38" height="28" rx="3" class="key"/>
+  <rect x="314" y="0" width="38" height="28" rx="3" class="key"/>
+  <rect x="356" y="0" width="38" height="28" rx="3" class="key"/>
+  <rect x="398" y="0" width="38" height="28" rx="3" class="key"/>
+  <rect x="440" y="0" width="38" height="28" rx="3" class="key"/>
+  <rect x="482" y="0" width="38" height="28" rx="3" class="key"/>
+</g>
+
+<g transform="translate(30,532)">
+  <rect x="84" y="0" width="38" height="28" rx="3" class="key"/>
+  <rect x="126" y="0" width="38" height="28" rx="3" fill="#2a3a4a" stroke="#44aaff" stroke-width="1"/><text x="145" y="14" class="keyt">`</text>
+  <rect x="168" y="0" width="38" height="28" rx="3" fill="#2a3a4a" stroke="#44aaff" stroke-width="1"/><text x="187" y="14" class="keyt">'</text>
+  <rect x="314" y="0" width="38" height="28" rx="3" class="key"/>
+  <rect x="356" y="0" width="38" height="28" rx="3" fill="#3a2a5a" stroke="#ff9944" stroke-width="1"/>
+  <text x="375" y="14" font-size="9" fill="#ff9944" text-anchor="middle" dominant-baseline="middle">▼</text>
+  <rect x="398" y="0" width="38" height="28" rx="3" class="key"/>
+</g>
+
+<!-- Legend -->
+<rect x="20" y="596" width="680" height="72" rx="8" class="panel"/>
+<text x="40" y="618" fill="#aaaacc" font-size="10">Legend</text>
+<rect x="40" y="628" width="14" height="14" rx="2" fill="#2a3a5a" stroke="#6a8aff" stroke-width="1"/>
+<text x="60" y="638" fill="#c8c8e8" font-size="10">⇧ Shift hold</text>
+<rect x="160" y="628" width="14" height="14" rx="2" fill="#2a4a3a" stroke="#6affaa" stroke-width="1"/>
+<text x="180" y="638" fill="#c8c8e8" font-size="10">⌃ Ctrl hold</text>
+<rect x="280" y="628" width="14" height="14" rx="2" fill="#2a2a4a" stroke="#aa88ff" stroke-width="1"/>
+<text x="300" y="638" fill="#c8c8e8" font-size="10">⌥ Alt hold</text>
+<rect x="400" y="628" width="14" height="14" rx="2" fill="#2a3a4a" stroke="#44aaff" stroke-width="1"/>
+<text x="420" y="638" fill="#c8c8e8" font-size="10">NUM layer key</text>
+<rect x="540" y="628" width="14" height="14" rx="2" fill="#3a2a5a" stroke="#ff9944" stroke-width="1"/>
+<text x="560" y="638" fill="#c8c8e8" font-size="10">Layer hold key</text>
+</svg>
