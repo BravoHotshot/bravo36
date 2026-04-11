@@ -8,7 +8,8 @@
     --key-s:   #d0d7de;
     --key-t:   #24292f;
     --dead:    #eaeef2;
-    --dead-s:  #d0d7de;
+    --dead-s:  #c8cdd2;
+    --dead-t:  #9ca3af;
     --sect:    #57606a;
 
     --shift-bg: #ddf4ff; --shift-s: #0969da; --shift-t: #0969da;
@@ -25,8 +26,9 @@
       --key:     #21262d;
       --key-s:   #30363d;
       --key-t:   #e6edf3;
-      --dead:    #161b22;
-      --dead-s:  #21262d;
+      --dead:    #1e2530;
+      --dead-s:  #3a424d;
+      --dead-t:  #4a5568;
       --sect:    #8b949e;
 
       --shift-bg: #0d2d4a; --shift-s: #388bfd; --shift-t: #79c0ff;
@@ -36,12 +38,13 @@
       --lay-bg:   #2b1100; --lay-s:   #f0883e; --lay-t:   #f0883e;
     }
   }
-  .bg      { fill: var(--bg); }
-  .panel   { fill: var(--panel); stroke: var(--panel-s); stroke-width: 1; }
-  .key     { fill: var(--key);  stroke: var(--key-s);  stroke-width: 0.8; }
-  .dead    { fill: var(--dead); stroke: var(--dead-s); stroke-width: 0.5; opacity: 0.5; }
-  .sect    { fill: var(--sect); font-size: 11px; font-weight: 600; text-anchor: middle; dominant-baseline: middle; }
-  .kt      { fill: var(--key-t); font-size: 11px; text-anchor: middle; dominant-baseline: middle; }
+  .bg    { fill: var(--bg); }
+  .panel { fill: var(--panel); stroke: var(--panel-s); stroke-width: 1; }
+  .key   { fill: var(--key);  stroke: var(--key-s);   stroke-width: 0.8; }
+  .dead  { fill: var(--dead); stroke: var(--dead-s);  stroke-width: 0.8; }
+  .sect  { fill: var(--sect); font-size: 11px; font-weight: 600; text-anchor: middle; dominant-baseline: middle; }
+  .kt    { fill: var(--key-t); font-size: 11px; text-anchor: middle; dominant-baseline: middle; }
+  .dt    { fill: var(--dead-t); }
 
   .k-sh { fill: var(--shift-bg); stroke: var(--shift-s); stroke-width: 1; }
   .k-ct { fill: var(--ctrl-bg);  stroke: var(--ctrl-s);  stroke-width: 1; }
@@ -55,33 +58,18 @@
   .t-nu { fill: var(--num-t);   }
   .t-la { fill: var(--lay-t);   }
 
-  /* dual-label keys: primary top-left, modifier bottom-right */
-  .kp  { font-size: 10px; text-anchor: start; dominant-baseline: auto; }
-  .km  { font-size: 8px;  text-anchor: end;   dominant-baseline: auto; }
-  /* layer thumb keys: primary top-left, layer name bottom-right */
+  .kp { font-size: 10px; text-anchor: start; dominant-baseline: auto; }
+  .km { font-size: 8px;  text-anchor: end;   dominant-baseline: auto; }
   .klp { font-size: 8px; text-anchor: start; dominant-baseline: auto; }
   .klm { font-size: 7px; text-anchor: end;   dominant-baseline: auto; }
 </style>
 
 <rect width="720" height="700" rx="12" class="bg"/>
 
-<!--
-  Layout math:
-  Key width=38, gap=4, pitch=42
-  5 keys per half → half-width = 5*38 + 4*4 = 206
-  Split gap = 80px
-  Total keys width = 206 + 80 + 206 = 492
-  Panel x=20, width=680 → inner center = 360
-  Left half starts at: 360 - 492/2 = 360 - 246 = 114
-  Right half starts at: 114 + 206 + 80 = 400
-  All rows use: translate(114, y) for left, right half keys offset by 286 (=400-114)
--->
-
 <!-- ═══ BASE ═══ -->
 <rect x="20" y="14" width="680" height="196" rx="8" class="panel"/>
 <text x="360" y="34" class="sect">BASE</text>
 
-<!-- row1 y=46 -->
 <g transform="translate(114,46)">
   <rect x="0"   y="0" width="38" height="28" rx="3" class="key"/><text x="19"  y="14" class="kt">Q</text>
   <rect x="42"  y="0" width="38" height="28" rx="3" class="key"/><text x="61"  y="14" class="kt">W</text>
@@ -95,68 +83,50 @@
   <rect x="454" y="0" width="38" height="28" rx="3" class="key"/><text x="473" y="14" class="kt">P</text>
 </g>
 
-<!-- row2 y=80 -->
 <g transform="translate(114,80)">
   <rect x="0"   y="0" width="38" height="28" rx="3" class="k-sh"/>
   <text x="6"   y="9"  class="kt kp t-sh">A</text>
   <text x="32"  y="23" class="kt km t-sh">⇧</text>
-
   <rect x="42"  y="0" width="38" height="28" rx="3" class="key"/><text x="61"  y="14" class="kt">S</text>
   <rect x="84"  y="0" width="38" height="28" rx="3" class="key"/><text x="103" y="14" class="kt">D</text>
   <rect x="126" y="0" width="38" height="28" rx="3" class="key"/><text x="145" y="14" class="kt">F</text>
   <rect x="168" y="0" width="38" height="28" rx="3" class="key"/><text x="187" y="14" class="kt">G</text>
-
   <rect x="286" y="0" width="38" height="28" rx="3" class="key"/><text x="305" y="14" class="kt">H</text>
   <rect x="328" y="0" width="38" height="28" rx="3" class="key"/><text x="347" y="14" class="kt">J</text>
   <rect x="370" y="0" width="38" height="28" rx="3" class="key"/><text x="389" y="14" class="kt">K</text>
   <rect x="412" y="0" width="38" height="28" rx="3" class="key"/><text x="431" y="14" class="kt">L</text>
-
   <rect x="454" y="0" width="38" height="28" rx="3" class="k-sh"/>
   <text x="460" y="9"  class="kt kp t-sh">;</text>
   <text x="486" y="23" class="kt km t-sh">⇧</text>
 </g>
 
-<!-- row3 y=114 -->
 <g transform="translate(114,114)">
   <rect x="0"   y="0" width="38" height="28" rx="3" class="k-ct"/>
   <text x="6"   y="9"  class="kt kp t-ct">Z</text>
   <text x="32"  y="23" class="kt km t-ct">⌃</text>
-
   <rect x="42"  y="0" width="38" height="28" rx="3" class="key"/><text x="61"  y="14" class="kt">X</text>
   <rect x="84"  y="0" width="38" height="28" rx="3" class="key"/><text x="103" y="14" class="kt">C</text>
   <rect x="126" y="0" width="38" height="28" rx="3" class="key"/><text x="145" y="14" class="kt">V</text>
   <rect x="168" y="0" width="38" height="28" rx="3" class="key"/><text x="187" y="14" class="kt">B</text>
-
   <rect x="286" y="0" width="38" height="28" rx="3" class="key"/><text x="305" y="14" class="kt">N</text>
   <rect x="328" y="0" width="38" height="28" rx="3" class="key"/><text x="347" y="14" class="kt">M</text>
   <rect x="370" y="0" width="38" height="28" rx="3" class="key"/><text x="389" y="14" class="kt">,</text>
   <rect x="412" y="0" width="38" height="28" rx="3" class="key"/><text x="431" y="14" class="kt">.</text>
-
   <rect x="454" y="0" width="38" height="28" rx="3" class="k-ct"/>
   <text x="460" y="9"  class="kt kp t-ct">/</text>
   <text x="486" y="23" class="kt km t-ct">⌃</text>
 </g>
 
-<!-- thumb row y=148 -->
-<!--
-  Thumb keys: ESC(⌥) ⌘ BSP | TAB SPC(NUM) ENT(NAV)
-  Left thumb: keys 3,4,5 of left half → x offsets 84,126,168
-  Right thumb: keys 1,2,3 of right half → x offsets 286,328,370
--->
 <g transform="translate(114,148)">
   <rect x="84"  y="0" width="38" height="28" rx="3" class="k-al"/>
   <text x="90"  y="9"  class="kt klp t-al">ESC</text>
   <text x="116" y="23" class="kt km t-al">⌥</text>
-
   <rect x="126" y="0" width="38" height="28" rx="3" class="key"/><text x="145" y="14" class="kt">⌘</text>
   <rect x="168" y="0" width="38" height="28" rx="3" class="key"/><text x="187" y="14" class="kt">BSP</text>
-
   <rect x="286" y="0" width="38" height="28" rx="3" class="key"/><text x="305" y="14" class="kt">TAB</text>
-
   <rect x="328" y="0" width="38" height="28" rx="3" class="k-la"/>
   <text x="334" y="9"  class="kt klp t-la">SPC</text>
   <text x="360" y="23" class="kt klm t-la">NUM</text>
-
   <rect x="370" y="0" width="38" height="28" rx="3" class="k-la"/>
   <text x="376" y="9"  class="kt klp t-la">ENT</text>
   <text x="402" y="23" class="kt klm t-la">NAV</text>
@@ -205,7 +175,6 @@
   <rect x="454" y="0" width="38" height="28" rx="3" class="dead"/>
 </g>
 
-<!-- NAV thumb row -->
 <g transform="translate(114,358)">
   <rect x="84"  y="0" width="38" height="28" rx="3" class="dead"/>
   <rect x="126" y="0" width="38" height="28" rx="3" class="dead"/>
@@ -258,7 +227,6 @@
   <rect x="454" y="0" width="38" height="28" rx="3" class="dead"/>
 </g>
 
-<!-- NUM thumb row -->
 <g transform="translate(114,568)">
   <rect x="84"  y="0" width="38" height="28" rx="3" class="dead"/>
   <rect x="126" y="0" width="38" height="28" rx="3" class="k-nu"/><text x="145" y="14" class="kt t-nu">`</text>
@@ -271,26 +239,28 @@
 <!-- ═══ Legend ═══ -->
 <rect x="20" y="644" width="680" height="44" rx="8" class="panel"/>
 <!--
-  5 legend items evenly spaced across 680px inner width
-  Each item: 12px swatch + 4px gap + ~80px text = ~96px
-  Total: 5*96 = 480, padding each side = (680-480)/2 = 100 → start x=120
-  Item pitch = 120px
+  5 items. Each: 14px swatch + 6px gap + text.
+  Measured text widths at font-size 10px (monospace ~6px/char):
+    "⇧ Shift hold" = 13 chars ≈ 78px  → item width ≈ 98px
+  Total 5 items * 98 = 490px
+  Center in 680: left offset = (680-490)/2 = 95 → absolute x = 20+95 = 115
+  Item pitch = 98px
 -->
-<g transform="translate(120, 660)">
-  <rect x="0"  y="-6" width="12" height="12" rx="2" class="k-sh"/>
-  <text x="17" y="1" class="kt t-sh" text-anchor="start" dominant-baseline="middle" font-size="10">⇧ Shift hold</text>
+<g transform="translate(115, 666)">
+  <rect x="0"   y="0" width="14" height="14" rx="2" class="k-sh"/>
+  <text x="20"  y="7" class="t-sh" font-size="10" text-anchor="start" dominant-baseline="middle">⇧ Shift hold</text>
 
-  <rect x="120" y="-6" width="12" height="12" rx="2" class="k-ct"/>
-  <text x="137" y="1" class="kt t-ct" text-anchor="start" dominant-baseline="middle" font-size="10">⌃ Ctrl hold</text>
+  <rect x="98"  y="0" width="14" height="14" rx="2" class="k-ct"/>
+  <text x="118" y="7" class="t-ct" font-size="10" text-anchor="start" dominant-baseline="middle">⌃ Ctrl hold</text>
 
-  <rect x="240" y="-6" width="12" height="12" rx="2" class="k-al"/>
-  <text x="257" y="1" class="kt t-al" text-anchor="start" dominant-baseline="middle" font-size="10">⌥ Alt hold</text>
+  <rect x="196" y="0" width="14" height="14" rx="2" class="k-al"/>
+  <text x="216" y="7" class="t-al" font-size="10" text-anchor="start" dominant-baseline="middle">⌥ Alt hold</text>
 
-  <rect x="360" y="-6" width="12" height="12" rx="2" class="k-nu"/>
-  <text x="377" y="1" class="kt t-nu" text-anchor="start" dominant-baseline="middle" font-size="10">NUM layer</text>
+  <rect x="294" y="0" width="14" height="14" rx="2" class="k-nu"/>
+  <text x="314" y="7" class="t-nu" font-size="10" text-anchor="start" dominant-baseline="middle">NUM layer</text>
 
-  <rect x="480" y="-6" width="12" height="12" rx="2" class="k-la"/>
-  <text x="497" y="1" class="kt t-la" text-anchor="start" dominant-baseline="middle" font-size="10">Layer hold</text>
+  <rect x="392" y="0" width="14" height="14" rx="2" class="k-la"/>
+  <text x="412" y="7" class="t-la" font-size="10" text-anchor="start" dominant-baseline="middle">Layer hold</text>
 </g>
 
 </svg>
